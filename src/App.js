@@ -24,7 +24,6 @@ class App extends React.Component {
   }
 
   deleteTask = (id) => {
-    console.log('Trying to delete external');
     this.setState(state => {
       return {
         listArray: state.listArray.filter(obj => obj.id !== id)

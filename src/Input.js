@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Input.module.css';
 
 class Input extends React.Component {
     constructor(props){
@@ -19,9 +20,13 @@ class Input extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}> 
-                <input value={this.state.input} onChange={this.onChange}/>
-                <button>submit</button>
+            <form onSubmit={this.onSubmit} className={styles.form}> 
+                <input 
+                value={this.state.input} 
+                onChange={this.onChange} 
+                className={styles.inputTask} 
+                placeholder='Type your task here'/>
+                <button className={styles.button} >submit</button>
             </form>
         )
     }
