@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './Task.module.css';
+import { connect } from 'react-redux';
+import { deleteTask, checkTask } from './actions';
 
 const Task = (props) => {
     const onChange = (e) => {
-        props.checkTask(props.task.id, e.target.checked);
+        props.checkTask(props.task.id);
     };
 
     const deleteTask = (e) => {
@@ -17,4 +19,11 @@ const Task = (props) => {
     )
 }
 
-export default Task;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        deleteTask: (id) => dispatch(deleteTask(id)),
+        checkTask: (id) => dispatch(checkTask(id))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Task);

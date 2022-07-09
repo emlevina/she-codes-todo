@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Input.module.css';
+import { connect } from 'react-redux';
+import { addTask } from './actions';
 
 class Input extends React.Component {
     constructor(props){
@@ -14,7 +16,7 @@ class Input extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.onSubmit(this.state.input);
+        this.props.addTask(this.state.input)
         this.setState({ input: '' })
     }
 
@@ -33,4 +35,10 @@ class Input extends React.Component {
    
 }
 
-export default Input;
+const mapDispatchToProps = (dispatch) => {
+    return {
+      addTask: (task) => dispatch(addTask(task))
+    }
+  }
+
+export default connect(null, mapDispatchToProps)(Input);

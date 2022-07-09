@@ -1,4 +1,5 @@
 import Task from './Task';
+import { connect } from 'react-redux';
 
 const TasksList = (props) => {
     return (
@@ -7,5 +8,11 @@ const TasksList = (props) => {
       </div>
     );
   }
+
+  const mapStateToProps = (state) => {
+    return {
+      tasks: state.tasks
+    }
+  }
   
-  export default TasksList;
+  export default connect(mapStateToProps)(TasksList);
