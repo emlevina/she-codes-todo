@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/she-codes-todo/static/css/main.0f22a65a.css",
+    "main.js": "/she-codes-todo/static/js/main.ac3e7c63.js",
+    "static/js/787.5e141d9e.chunk.js": "/she-codes-todo/static/js/787.5e141d9e.chunk.js",
+    "index.html": "/she-codes-todo/index.html",
+    "main.0f22a65a.css.map": "/she-codes-todo/static/css/main.0f22a65a.css.map",
+    "main.ac3e7c63.js.map": "/she-codes-todo/static/js/main.ac3e7c63.js.map",
+    "787.5e141d9e.chunk.js.map": "/she-codes-todo/static/js/787.5e141d9e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f22a65a.css",
+    "static/js/main.ac3e7c63.js"
+  ]
+}
